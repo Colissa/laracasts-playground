@@ -41,19 +41,20 @@ Route::get('/', function() {
     ]);
 });
 
-Route::get('/posts/{post}', function($post) {
+// Route::get('/posts/{post}', function($post) {
 
-    $posts = [
-        'my-first-post' => 'Hello! This is my first post!',
-        'my-second-post' => 'Hello! This is my second post!'
-    ];
+//     $posts = [
+//         'my-first-post' => 'Hello! This is my first post!',
+//         'my-second-post' => 'Hello! This is my second post!'
+//     ];
 
-    if (! array_key_exists($post, $posts)) {
-        abort(404, 'Sorry, that post was not found.');
-    }
+//     if (! array_key_exists($post, $posts)) {
+//         abort(404, 'Sorry, that post was not found.');
+//     }
 
-    return view('post', [
-        'post' => $posts[$post]
-    ]);
-});
+//     return view('post', [
+//         'post' => $posts[$post]
+//     ]);
+// });
 
+Route::get('/posts/{post}', 'App\Http\Controllers\PostsController@show');
