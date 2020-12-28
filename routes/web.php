@@ -30,16 +30,16 @@ Route::get('/test', function() {
     return view('test');
 });
 
-Route::get('/', function() {
-    $name = request('name');
-    return $name;
-});
+// Route::get('/', function() {
+//     $name = request('name');
+//     return $name;
+// });
 
-Route::get('/', function() {
-    return view('test', [
-        'name' => request('name')
-    ]);
-});
+// Route::get('/', function() {
+//     return view('test', [
+//         'name' => request('name')
+//     ]);
+// });
 
 // Route::get('/posts/{post}', function($post) {
 
