@@ -24,17 +24,7 @@ Route::get('/about', function () {
     ]);
 });
 
-//******** Original Homework Solution (WRONG) ********//
-
-// Route::get('/articles', function () {
-//     return view('articles', [
-//         'articles' => \App\Models\Article::latest()->get()
-//     ]);
-// });
-
-
-//******** Correct Homework Solution ********//
 Route::get('/articles', 'App\Http\Controllers\ArticlesController@index');
-
-
+Route::post('/articles', 'App\Http\Controllers\ArticlesController@store');
+Route::get('/articles/create', 'App\Http\Controllers\ArticlesController@create');
 Route::get('/articles/{article}', 'App\Http\Controllers\ArticlesController@show');
