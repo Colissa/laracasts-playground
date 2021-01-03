@@ -45,9 +45,10 @@ class ArticlesController extends Controller
     }
 
     // Show a view to edit an exiting resource.
-    public function edit() {
+    public function edit($id) {
+        $article = Article::find($id);
 
-        return view('articles.edit');
+        return view('articles.edit', ['article' => $article]);
 
     }
 
