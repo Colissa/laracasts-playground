@@ -29,3 +29,4 @@ Route::post('/articles', 'App\Http\Controllers\ArticlesController@store');
 Route::get('/articles/create', 'App\Http\Controllers\ArticlesController@create');
 Route::get('/articles/{article}', 'App\Http\Controllers\ArticlesController@show');
 Route::get('/articles/{article}/edit', 'App\Http\Controllers\ArticlesController@edit');
+Route::put('/articles/{article}', 'App\Http\Controllers\ArticlesController@update');
