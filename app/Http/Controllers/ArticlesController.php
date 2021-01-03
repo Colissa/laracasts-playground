@@ -47,6 +47,8 @@ class ArticlesController extends Controller
     // Show a view to edit an exiting resource.
     public function edit() {
 
+        return view('articles.edit');
+
     }
 
     // Persist the edited resource.
