@@ -12,4 +12,17 @@ class Assignments extends Model
         $this->completed = true;
         $this->save();
     }
+
+    public function user() {
+        //$assigment->user;
+        //AKA select * from user where assigment_id = $this->id (id of current assigment);
+        return $this->belongsTo(User::class);
+    }
 }
+
+// hasOne
+// hasMany
+// belongsTo
+// belongsToMany
+// morphMany
+// morphToMany
