@@ -18,6 +18,8 @@ class UserFactory extends Factory
     /**
      * Define the model's default state.
      *
+     * To create: User::factory(2)->create();
+     *
      * @return array
      */
     public function definition()
