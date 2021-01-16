@@ -20,6 +20,11 @@ class Article extends Model
         // AKA select * from user where article_id = $this->id (id of current article);
         return $this->belongsTo(User::class, 'user_id'); // Overrider the foreign key because it's naturally looking for author_id.
     }
+
+    public function tags() {
+        // $article->tags; -Returns all tags associated with that article.
+        return $this->belongsToMany(Tag::class);
+    }
 }
 
-//$article->user;
+
